@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>TechGenius</title>
+</head>
+<body>
+    <header class="header">
+
+        <div class="navbar">
+            <h1 class="logo">TechGenius</h1>
+            
+            <div class="nav-actions">
+                <button class="login-btn">Login</button>
+
+                <!-- Cart button with badge -->
+                 <button class="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    Cart
+                    <span class="cart-badge" id="cart-count">3</span>
+                </button>
+            </div>
+        </div>
+
+        <section class="hero">
+            <h1>Big <span>Weekend Sale</span>on Gadgets</h1>
+            <p>Up to 40% off on selected Iphone, Laptop, Computer with Monitor, and Gadgets accessories. Limited stock only.</p>
+            <button class="btn-primary">Shop Deals</button>
+        </section>
+
+        <div class="filters">
+            <h4>Filter by:</h4>
+            <div class="filters-btn">
+                <buttom class="filters-btn.active">all</buttom>
+                <buttom class="filters-btn">Iphone</buttom>
+                <buttom class="filters-btn">Laptop</buttom>
+                <buttom class="filters-btn">Computer with Monitor</buttom>
+                <buttom class="filters-btn">Headset</buttom>
+                <button class="filters-btn">Iphone accessories</button>
+            </div>
+        </div>
+    </header>
+
+<section class="products">
+  <h2>Featured Products</h2>
+
+  <div class="product-grid">
+
+    <div class="product-card">
+        <span class="tag sale">Sale</span>
+        <div class="product-img"></div>
+        <div class="product-title">Iphone 17</div>
+        <div class="product-desc">features a 6.3-inch OLED display, A19 chip, and a dual 48 MP camera system</div>
+        <div class="product-price">₱54,990</div>
+        <div class="rating">★★★★★ (5.0)</div>
+      <button class="product-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <span class="tag sale">Sale</span>
+      <div class="product-img"></div>
+      <div class="product-title">Ultrabook Pro 14"</div>
+      <div class="product-desc">Intel i7 • 16GB RAM • 512GB SSD</div>
+      <div class="product-price">₱54,999</div>
+      <div class="rating">★★★★★ (4.9)</div>
+      <button class="product-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <span class="tag new">New</span>
+      <div class="product-img"></div>
+      <div class="product-title">Noise-Cancelling Headphones</div>
+      <div class="product-desc">Wireless • Fast Charge</div>
+      <div class="product-price">₱3,499</div>
+      <div class="rating">★★★★☆ (4.6)</div>
+      <button class="product-btn added">✔ Added</button>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-title">Ergonomic Wireless Mouse</div>
+      <div class="product-desc">Silent Click • USB-C</div>
+      <div class="product-price">₱799</div>
+      <div class="rating">★★★★☆ (4.4)</div>
+      <button class="product-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <span class="tag stock">Low Stock</span>
+      <div class="product-img"></div>
+      <div class="product-title">Mechanical Keyboard (RGB)</div>
+      <div class="product-desc">Blue Switch • RGB Backlight</div>
+      <div class="product-price">₱2,199</div>
+      <div class="rating">★★★★★ (4.8)</div>
+      <button class="product-btn">Add to Cart</button>
+      <div class="low-stock">Hurry! Few left in stock</div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.getElementById("toggleTheme").onclick = function () {
+    document.body.classList.toggle("dark");
+  };
+</script>
+
+</body>
+</html>

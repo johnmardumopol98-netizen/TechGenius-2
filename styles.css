@@ -1,0 +1,367 @@
+/* ================================
+   1. CSS VARIABLES (THEMING)
+================================ */
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --primary: #1e90ff;
+  --accent: #ff6b6b;
+  --radius: 12px;
+
+  /* Fluid Typography */
+  --title-size: clamp(2rem, 6vw, 4rem);
+  --subtitle-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+body.dark {
+  --bg: #111;
+  --text: #eee;
+  --primary: #0d6efd;
+  --accent: #ff8787;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ================================
+   2. HEADER (Flexbox)
+================================ */
+.header {
+    background:#ffffff;
+    padding: 20px;
+}
+.navbar{
+    max-width: 1200px;
+    margin: 0 auto 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  display: grid;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+/* Cart button container */
+    .cart-btn {
+        position: relative;
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius);
+        cursor: pointer;
+        font-size: 14px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    /* Badge counter */
+    .cart-badge {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background: red;
+        color: white;
+        font-size: 10px;
+        font-weight: bold;
+        padding: 3px 6px;
+        border-radius: var(--radius);
+        min-width: 18px;
+        text-align: center;
+        line-height: 1;
+    }
+
+    /* Icon styling */
+    .cart-btn i {
+        font-size: 20px;
+    }
+
+    .cart-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+    }
+
+    .cart-btn:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .login-btn {
+        background-color: #007bff; /* Green */
+        color: white;
+        padding: 0.5rem 1rem;
+        font-size: 14px;
+        border: none;
+        border-radius: var(--radius);
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    /* Hover effect */
+    .login-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+    }
+
+    /* Active (click) effect */
+    .login-btn:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+/* ================================
+   3. HERO SECTION
+================================ */
+.hero {
+  max-width: 1200px;
+  margin: auto;
+  background: linear-gradient(135deg, #111, #0d6efd,#ff6b6b);
+  color: white;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.hero h1 span {
+    color:#b6f800;
+} 
+
+.hero p {
+     margin: 10px 0 20px;
+    font-size: 13px;
+    max-width: 500px;
+    opacity: 0.9; 
+}
+
+/* ================================
+  Filters
+================================ */
+.filters{
+    max-width: 1200px;
+    margin: 25px auto 0;
+}
+
+.filters h4{
+    margin-bottom: 8px;
+    font-size: 13px;
+    color:#000000;
+}
+
+.filters-btns{
+    display: flex;
+    gap:10px;
+    flex-wrap: wrap;
+}
+
+.filters-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #f6f7f8;
+    background: #f6f7f8;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filters-btn.active, .filters-btn:hover {
+    background: #0d6efd;
+    color: #ffffff;
+}
+
+
+/* ================================
+   4. BUTTON (Animations + Transitions)
+================================ */
+.btn-primary {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  background: var(--primary);
+  border: none;
+  border-radius: var(--radius);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  animation: fadeInUp 1s ease;
+}
+
+.btn-primary:hover {
+  background: var(--accent);
+  transform: translateY(-4px) scale(1.05);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================
+   SECTION
+================================ */
+.products{
+  max-width:1200px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+.products h2{
+  margin-bottom:20px;
+  font-size:22px;
+}
+
+/* Grid */
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+
+/* Card */
+.product-card{
+  background: linear-gradient(135deg, #111, #0d6efd,#ff6b6b);
+  border-radius:var(--radius);
+  padding:15px;
+  box-shadow:0 8px 25px rgba(128, 45, 196, 0.08);
+  transition:0.3s ease;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+}
+
+.product-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* Tags */
+.tag{
+  position:absolute;
+  top:12px;
+  left:12px;
+  padding:4px 10px;
+  font-size:11px;
+  border-radius:20px;
+  color:#000000;
+  font-weight:600;
+}
+
+.tag.sale{background: #eeff01;}
+.tag.stock{background: #d10202;}
+.tag.new{background:var(--primary);}
+
+/* Image */
+.product-img{
+  width:100%;
+  height:140px;
+  border-radius:10px;
+  background:#f8f9fc;
+  margin-bottom:12px;
+}
+
+/* Title */
+.product-title{
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:6px;
+}
+
+/* Description */
+.product-desc{
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:10px;
+}
+
+/* Price */
+.product-price{
+  font-size:16px;
+  font-weight:700;
+  color:var(--primary);
+  margin-bottom:6px;
+}
+
+/* Rating */
+.rating{
+  font-size:12px;
+  color:#fbbf24;
+  margin-bottom:12px;
+}
+
+/* Button */
+.product-btn{
+  margin-top:auto;
+  padding:10px;
+  border:none;
+  border-radius:10px;
+  font-size:13px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+  background:#e0e7ff;
+  color:var(--primary);
+}
+
+.product-btn:hover{
+  background:var(--primary);
+  color:#fff;
+}
+
+/* Active/Added */
+.product-btn.added{
+  background:var(--success);
+  color:#fff;
+}
+
+/* Low stock text */
+.low-stock{
+  font-size:11px;
+  color:var(--danger);
+  margin-top:6px;
+  text-align:center;
+}
+
+/* ================================
+   8. MEDIA QUERY EXAMPLE
+================================ */
+@media (max-width: 480px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+}
